@@ -59,10 +59,11 @@ footer {
   background-color: #2A4C6B; /* Darker grey color for footer */
   color: #fff; /* Text color for better readability */
   text-align: center;
-  padding: 5px 0;
+  padding: 2px 0;
   position: fixed;
   bottom: 0;
   width: 100%;
+  font-size: 14px;
 }
 
 form {
