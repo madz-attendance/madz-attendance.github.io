@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: #f0f0f0;
+  background-color: #3498db;
   color: #fff;
   padding: 10px 0;
   display: flex;
@@ -61,7 +61,7 @@ main h2 {
 }
 
 footer {
-  background-color: #f0f0f0;
+  background-color: #3498db;
   color: #fff;
   text-align: center;
   padding: 10px 0;
