@@ -1,3 +1,4 @@
 # madz-attendance.io
 
-Hello
+Welcome to MADZ Attendance.
+
