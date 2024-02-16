@@ -102,11 +102,8 @@ form {
   z-index: 100;
   top: 4px;
   left: 5px;
-  /*justify-content: center;*/
   width: 150px;
   height: 58px;
-  /* position: absolute; */
-  /* top: 60px; */
-  /*margin-left: 50px;*/
+  cursor: pointer; /* Set to pointer cursor to tell user that this is clickable */
   
 }
