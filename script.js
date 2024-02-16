@@ -49,7 +49,7 @@ home_button.addEventListener("mouseover", function ()
 {
 	if (currentTab != "home")
 	{
-		home_button.style.filter = "brightness(50%)";
+		home_button.style.filter = "brightness(150%)";
 	}
 });
 
@@ -83,7 +83,7 @@ faq_button.addEventListener("mouseover", function ()
 {
 	if (currentTab != "faq")
 	{
-		faq_button.style.filter = "brightness(50%)";
+		faq_button.style.filter = "brightness(150%)";
 	}
 });
 
@@ -116,7 +116,7 @@ about_button.addEventListener("mouseover", function ()
 {
 	if (currentTab != "about")
 	{
-		about_button.style.filter = "brightness(50%)";
+		about_button.style.filter = "brightness(150%)";
 	}
 });
 
