@@ -105,7 +105,7 @@ about_button.addEventListener("click", function ()
 });
 
 // About Button Hover Event
-faq_button.addEventListener("mouseover", function ()
+about_button.addEventListener("mouseover", function ()
 {
 	if (currentTab != "about")
 	{
@@ -114,7 +114,7 @@ faq_button.addEventListener("mouseover", function ()
 });
 
 // About Button Unhover Event
-faq_button.addEventListener("mouseout", function ()
+about_button.addEventListener("mouseout", function ()
 {
 	if (currentTab != "about")
 	{
