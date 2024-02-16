@@ -70,3 +70,15 @@ form {
   display: flex;
   align-items: center;
 }
+
+
+/* Added by Zaynin in class */
+.madz_logo
+{
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  margin-left: 0px;
+  width: 315px;
+  height: 121px;
+}
