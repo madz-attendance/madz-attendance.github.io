@@ -30,7 +30,7 @@ var faq_button = document.getElementById("faq_button");
 var about_button = document.getElementById("about_button");
 
 var currentTab = "home";
-
+home_button.style.filter = "brightness(150%)";
 
 // Home Button Click Event - sets the current tab name
 home_button.addEventListener("click", function ()
