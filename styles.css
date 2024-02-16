@@ -38,7 +38,7 @@ main > h2 {
   margin-right: 10px;
 
   /* Added by zaynin */
-  background-color: #2A4C6B;               /* Header dark blue */
+  background-color: transparent;           /* Transparent background */
   font-family: 'Corbel', sans-serif;       /* Corbel Font */
   font-weight: bold;                       /* Bold font */
   font-size: 22px;
