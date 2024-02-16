@@ -76,7 +76,7 @@ form {
 .madz_logo
 {
   left: 50%;
-  margin-left: 157.5px;
+  margin-left: -157.5px;
   width: 315px;
   height: 121px;
   / *position: absolute; */
