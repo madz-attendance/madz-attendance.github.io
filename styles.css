@@ -86,7 +86,7 @@ form {
 {
   top: 0px;
   left: 0px;
-  justify-content: center;
+  /*justify-content: center;*/
   width: 105px;
   height: 40px;
   /* position: absolute; */
