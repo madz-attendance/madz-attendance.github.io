@@ -75,9 +75,10 @@ form {
 /* Added by Zaynin in class */
 .madz_logo
 {
-  align: center;
-  top: 0px;
-  left: 50%;
+  /*align: center; */
+  /*top: 0px;*/
+  /*left: 50%;*/
+  justify-content: center;
   width: 315px;
   height: 121px;
   /* position: absolute; */
