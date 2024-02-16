@@ -72,6 +72,12 @@ footer {
   bottom: 0;
   width: 100%;
   font-size: 14px;
+
+  /* Added by Zaynin */
+  font-family: 'Corbel', sans-serif;       /* Corbel Font */
+  font-weight: bold;                       /* Bold font */
+  font-size: 18px;
+  color: white;       
 }
 
 form {
