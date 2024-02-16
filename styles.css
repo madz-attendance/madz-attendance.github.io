@@ -36,6 +36,13 @@ main > h2 {
   cursor: pointer;
   font-size: 16px;
   margin-right: 10px;
+
+  /* Added by zaynin */
+  background-color: #2A4C6B;               /* Header dark blue */
+  font-family: 'Corbel', sans-serif;       /* Corbel Font */
+	font-weight: bold;                       /* Bold font */
+  color: white;                            /* Font color */
+  
 }
 
 /* Active tab button style */
