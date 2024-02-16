@@ -75,11 +75,11 @@ form {
 /* Added by Zaynin in class */
 .madz_logo
 {
-  left: 50%;
-  margin-left: -157.5px;
+  align: center;
+  top: 0px;
   width: 315px;
   height: 121px;
-  / *position: absolute; */
+  /* position: absolute; */
   /* top: 60px; */
   /*margin-left: 50px;*/
   
