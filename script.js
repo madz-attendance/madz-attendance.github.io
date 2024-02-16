@@ -21,6 +21,15 @@ function openTab(tabId) {
   }
 }
 
+// Clicking on MADZ logo will go to home page
+// Added by Zaynin 2/16/2024 @5:45pm
+var madzLogoButton = document.getElementById("madz_logo");
+
+madzLogoButton.addEventListener("click", function ()
+{
+	window.location.href = "index.html";
+});
+
 
 
 /* Buttons will highlight if they are hovered on, except for the button of the page that you are currently on. */
@@ -33,6 +42,10 @@ var currentTab = "home";
 home_button.style.filter = "brightness(150%)";
 
 // Home Button Click Event - sets the current tab name
+// Description: When you click on the this button, if this button is not already
+//              pressed, then it will reset all of the button colors, set currentTab to the current tab,
+//              and then increase the brightness of this tab button to show that this is
+//              the tab that the user is currently on.
 home_button.addEventListener("click", function ()
 {
 	resetButtonColors();
@@ -45,6 +58,10 @@ home_button.addEventListener("click", function ()
 });
 
 // Home Button Hover Event
+// Description: When you hover over this button, if the user is not already on this
+//              tab, then increase the brightness of the button to show that this is a clickable
+//              button. Otherwise, if you are on this tab already, then it is already brightened,
+//              so no need to do anything.
 home_button.addEventListener("mouseover", function ()
 {
 	if (currentTab != "home")
@@ -54,6 +71,10 @@ home_button.addEventListener("mouseover", function ()
 });
 
 // Home Button Unhover Event
+// Description: When you unhover over this button, if the user is not already on this tab,
+//              then decrease the brightness back to its default, since the user is no longer hovering
+//              over it. Otherwise, if the user is already on this tab, then do not decrease the brightness,
+//              as this button is supposed to be brightened to signify that the user is currently on this tab.
 home_button.addEventListener("mouseout", function ()
 {
 	if (currentTab != "home")
@@ -66,6 +87,10 @@ home_button.addEventListener("mouseout", function ()
 
 
 // FAQ Button Click Event - sets the current tab name
+// Description: When you click on the this button, if this button is not already
+//              pressed, then it will reset all of the button colors, set currentTab to the current tab,
+//              and then increase the brightness of this tab button to show that this is
+//              the tab that the user is currently on.
 faq_button.addEventListener("click", function ()
 {
 	resetButtonColors();
@@ -79,6 +104,10 @@ faq_button.addEventListener("click", function ()
 });
 
 // FAQ Button Hover Event
+// Description: When you hover over this button, if the user is not already on this
+//              tab, then increase the brightness of the button to show that this is a clickable
+//              button. Otherwise, if you are on this tab already, then it is already brightened,
+//              so no need to do anything.
 faq_button.addEventListener("mouseover", function ()
 {
 	if (currentTab != "faq")
@@ -88,6 +117,10 @@ faq_button.addEventListener("mouseover", function ()
 });
 
 // FAQ Button Unhover Event
+// Description: When you unhover over this button, if the user is not already on this tab,
+//              then decrease the brightness back to its default, since the user is no longer hovering
+//              over it. Otherwise, if the user is already on this tab, then do not decrease the brightness,
+//              as this button is supposed to be brightened to signify that the user is currently on this tab.
 faq_button.addEventListener("mouseout", function ()
 {
 	if (currentTab != "faq")
@@ -100,6 +133,10 @@ faq_button.addEventListener("mouseout", function ()
 
 
 // About Button Click Event - sets the current tab name
+// Description: When you click on the this button, if this button is not already
+//              pressed, then it will reset all of the button colors, set currentTab to the current tab,
+//              and then increase the brightness of this tab button to show that this is
+//              the tab that the user is currently on.
 about_button.addEventListener("click", function ()
 {
 	resetButtonColors();
@@ -112,6 +149,10 @@ about_button.addEventListener("click", function ()
 });
 
 // About Button Hover Event
+// Description: When you hover over this button, if the user is not already on this
+//              tab, then increase the brightness of the button to show that this is a clickable
+//              button. Otherwise, if you are on this tab already, then it is already brightened,
+//              so no need to do anything.
 about_button.addEventListener("mouseover", function ()
 {
 	if (currentTab != "about")
@@ -121,6 +162,10 @@ about_button.addEventListener("mouseover", function ()
 });
 
 // About Button Unhover Event
+// Description: When you unhover over this button, if the user is not already on this tab,
+//              then decrease the brightness back to its default, since the user is no longer hovering
+//              over it. Otherwise, if the user is already on this tab, then do not decrease the brightness,
+//              as this button is supposed to be brightened to signify that the user is currently on this tab.
 about_button.addEventListener("mouseout", function ()
 {
 	if (currentTab != "about")
@@ -130,6 +175,8 @@ about_button.addEventListener("mouseout", function ()
 });
 
 
+// resetButtonColors()
+// Description: Resets all button colors to their default brightness (100%).
 function resetButtonColors()
 {
 	home_button.style.filter = "brightness(100%)";
