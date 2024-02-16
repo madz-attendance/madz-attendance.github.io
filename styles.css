@@ -40,7 +40,8 @@ main > h2 {
   /* Added by zaynin */
   background-color: #2A4C6B;               /* Header dark blue */
   font-family: 'Corbel', sans-serif;       /* Corbel Font */
-	font-weight: bold;                       /* Bold font */
+  font-weight: bold;                       /* Bold font */
+  font-size: 22px;
   color: white;                            /* Font color */
   
 }
