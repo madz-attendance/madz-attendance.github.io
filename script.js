@@ -35,9 +35,11 @@ var currentTab = "home";
 // Home Button Click Event - sets the current tab name
 home_button.addEventListener("click", function ()
 {
+	resetButtonColors();
 	if (currentTab != "home")
 	{
 		currentTab = "home";
+		home_button.style.filter = "brightness(150%)";
 	}
 
 });
@@ -66,10 +68,13 @@ home_button.addEventListener("mouseout", function ()
 // FAQ Button Click Event - sets the current tab name
 faq_button.addEventListener("click", function ()
 {
+	resetButtonColors();
 	if (currentTab != "faq")
 	{
 		currentTab = "faq";
+		faq_button.style.filter = "brightness(150%)";
 	}
+
 
 });
 
@@ -97,9 +102,11 @@ faq_button.addEventListener("mouseout", function ()
 // About Button Click Event - sets the current tab name
 about_button.addEventListener("click", function ()
 {
+	resetButtonColors();
 	if (currentTab != "about")
 	{
 		currentTab = "about";
+		about_button.style.filter = "brightness(150%)";
 	}
 
 });
@@ -123,3 +130,9 @@ about_button.addEventListener("mouseout", function ()
 });
 
 
+function resetButtonColors()
+{
+	home_button.style.filter = "brightness(100%)";
+	faq_button.style.filter = "brightness(100%)";
+	about_button.style.filter = "brightness(100%)";
+}
