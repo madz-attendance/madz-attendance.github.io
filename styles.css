@@ -84,12 +84,11 @@ form {
 /* Added by Zaynin in class */
 .madz_logo
 {
-  /*align: center; */
-  /*top: 0px;*/
-  /*left: 50%;*/
+  top: 0px;
+  left: 0px;
   justify-content: center;
-  width: 315px;
-  height: 121px;
+  width: 105px;
+  height: 40px;
   /* position: absolute; */
   /* top: 60px; */
   /*margin-left: 50px;*/
