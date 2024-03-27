@@ -1,0 +1,332 @@
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: #ffffff;
+  
+  /* OPTIONAL: HUE ENTIRE WEBPAGE */
+  /* filter: hue-rotate(180deg); */
+}
+
+
+/* LOGO */
+.logo
+{
+	z-index: 100;
+	position: absolute;
+	width: 315px;
+	height: 121px;
+	cursor: default;
+	top: 50px;
+	left: 50%;
+	margin-left: -157.5px;
+	cursor: pointer;
+}
+
+
+
+.register_prompt
+{
+	z-index: 100;
+	position: absolute;
+	top: 300px;
+	left: 50%;
+	transform: translateX(-50%);				/* Center on screen */
+	text-align: center;
+	color: #2A4C6B;
+	font-size: 20px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.login_prompt
+{
+	z-index: 100;
+	position: absolute;
+	top: 350px;
+	left: 50%;
+	transform: translateX(-50%);				/* Center on screen */
+	text-align: center;
+	color: #2A4C6B;
+	font-size: 20px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: pointer;	
+}
+
+
+
+.email_entry
+{
+	position: absolute;
+	top: 350px;
+	width: 300px;
+	height: 20px;
+	left: 50%;
+	margin-left: -150px;
+	background-color: #D8D8D8;
+	color: #2A4C6B;
+	font-size: 18px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: text;
+	border: 2px solid #2A4C6B;
+	text-align: center;
+}
+
+.first_name_entry
+{
+	position: absolute;
+	top: 400px;
+	width: 300px;
+	height: 20px;
+	left: 50%;
+	margin-left: -150px;
+	background-color: #D8D8D8;
+	color: #2A4C6B;
+	font-size: 18px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: text;
+	border: 2px solid #2A4C6B;
+	text-align: center;
+}
+
+.last_name_entry
+{
+	position: absolute;
+	top: 450px;
+	width: 300px;
+	height: 20px;
+	left: 50%;
+	margin-left: -150px;
+	background-color: #D8D8D8;
+	color: #2A4C6B;
+	font-size: 18px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: text;
+	border: 2px solid #2A4C6B;
+	text-align: center;
+}
+
+.password_entry
+{
+	position: absolute;
+	top: 500px;
+	width: 300px;
+	height: 20px;
+	left: 50%;
+	margin-left: -150px;
+	background-color: #D8D8D8;
+	color: #2A4C6B;
+	font-size: 18px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: text;
+	border: 2px solid #2A4C6B;
+	text-align: center;
+}
+
+.password_entry_for_login_page
+{
+	position: absolute;
+	top: 400px;
+	width: 300px;
+	height: 20px;
+	left: 50%;
+	margin-left: -150px;
+	background-color: #D8D8D8;
+	color: #2A4C6B;
+	font-size: 18px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: text;
+	border: 2px solid #2A4C6B;
+	text-align: center;
+}
+
+.create_an_account
+{
+	z-index: 100;
+	position: absolute;
+	top: 300px;
+	left: 50%;
+	/*margin-left: -50px;*/
+	transform: translateX(-50%);				/* Center on screen */
+	text-align: center;
+	color: #2A4C6B;
+	font-size: 20px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: pointer;	
+}
+
+.register_button
+{
+	z-index: 100;
+	position: absolute;
+	top: 600px;
+	left: 50%;
+	/*margin-left: -35px;*/
+	transform: translateX(-50%);				/* Center on screen */
+	text-align: center;
+	color: #2A4C6B;
+	font-size: 20px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.already_have_an_account_button
+{
+	z-index: 100;
+	position: absolute;
+	top: 750px;
+	left: 50%;
+	/*margin-left: -35px;*/
+	transform: translateX(-50%);				/* Center on screen */
+	text-align: center;
+	color: #2A4C6B;
+	font-size: 12px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* ====================================================================== */
+/* LOG IN PAGE */
+
+.log_in_text
+{
+	z-index: 100;
+	position: absolute;
+	top: 300px;
+	left: 50%;
+	/*margin-left: -50px;*/
+	transform: translateX(-50%);				/* Center on screen */
+	text-align: center;
+	color: #2A4C6B;
+	font-size: 20px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: pointer;	
+}
+
+.login_button
+{
+	z-index: 100;
+	position: absolute;
+	top: 600px;
+	left: 50%;
+	/*margin-left: -35px;*/
+	transform: translateX(-50%);				/* Center on screen */
+	text-align: center;
+	color: #2A4C6B;
+	font-size: 20px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.dont_have_an_account_button
+{
+	z-index: 100;
+	position: absolute;
+	top: 750px;
+	left: 50%;
+	/*margin-left: -35px;*/
+	transform: translateX(-50%);				/* Center on screen */
+	text-align: center;
+	color: #2A4C6B;
+	font-size: 12px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* ====================================================================== */
+/* USER ACCOUNT PAGE */
+
+.account_text
+{
+	z-index: 100;
+	position: absolute;
+	top: 250px;
+	left: 50%;
+	/*margin-left: -35px;*/
+	transform: translateX(-50%);				/* Center on screen */
+	text-align: center;
+	color: #2A4C6B;
+	font-size: 24px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+		
+}
+
+.home_button
+{
+	z-index: 100;
+	position: absolute;
+	top: 650px;
+	left: 50%;
+	/*margin-left: -35px;*/
+	transform: translateX(-50%);				/* Center on screen */
+	text-align: center;
+	color: #2A4C6B;
+	font-size: 20px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+	
+}
+
+.logout_button
+{
+	z-index: 100;
+	position: absolute;
+	bottom: 100px;
+	left: 50%;
+	/*margin-left: -35px;*/
+	transform: translateX(-50%);				/* Center on screen */
+	text-align: center;
+	color: #2A4C6B;
+	font-size: 20px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+	
+}
+
+.my_classes_button
+{
+	z-index: 100;
+	position: absolute;
+	top: 450px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #2A4C6B;
+	font-size: 24px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+
+.temporary_useraccount_content
+{
+	z-index: 100;
+	position: absolute;
+	top: 450px;
+	left: 50%;
+	/*margin-left: -35px;*/
+	transform: translateX(-50%);				/* Center on screen */
+	text-align: center;
+	color: #2A4C6B;
+	font-size: 24px;
+	font-family: 'Corbel', sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+		
+}

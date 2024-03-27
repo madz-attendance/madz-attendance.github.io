@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./loginstyles.css">							<!-- The CSS file for this project -->
+    <title>Register | MADZ Attendance</title>
+	<!--<link rel="icon" href="./.png" type="image/x-icon">-->
+	
+
+</head>
+<body>
+
+	<img id="logo" src="./images/madz_attendance.png" alt="logo" class="logo">
+	<div id="create_an_account" class="create_an_account">Create an account</div>
+	<input type="email" id="email" placeholder="Email" class="email_entry">
+	<input type="first_name" id="first_name" placeholder="First Name" class="first_name_entry">
+	<input type="last_name" id="last_name" placeholder="Last Name" class="last_name_entry">
+	<input type="password" id="password" placeholder="Password" class="password_entry">
+
+	<div id="register_button" class="register_button">Register</div>
+	<div id="already_have_an_account_button" class="already_have_an_account_button">Already have an account? Sign in</div>
+
+
+
+
+	<!-- Core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+	
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+	<script src="./register.js"></script>
+
+
+</body>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./loginstyles.css">							<!-- The CSS file for this project -->
+    <title>Login | MADZ Attendance</title>
+	<!--<link rel="icon" href="./.png" type="image/x-icon">-->
+	
+
+</head>
+<body>
+
+	<img id="logo" src="./images/madz_attendance.png" alt="logo" class="logo">
+	<div id="log_in_text" class="log_in_text">Log in to your account</div>
+	<input type="email" id="email" placeholder="Email" class="email_entry">
+	<input type="password" id="password" placeholder="Password" class="password_entry_for_login_page">
+
+	<div id="login_button" class="login_button">Log In</div>
+	<div id="dont_have_an_account_button" class="dont_have_an_account_button">Don't have an account? Sign up</div>
+
+
+
+
+
+	<!-- Core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+	
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+	<script src="./login.js"></script>
+
+
+</body>
