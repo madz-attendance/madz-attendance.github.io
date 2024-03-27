@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MADZ Attendance Site</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+<header> 
+    <div style="margin: 0 auto;">
+        <button id="home_button" class="tab-button" onclick="openTab('home')">Home</button>
+        <button id="faq_button" class="tab-button" onclick="openTab('faq')">FAQ</button>
+        <button id="about_button" class="tab-button" onclick="openTab('about')">About</button>
+		<button id="login_button" class="tab-button">Account</button>
+    </div>
+</header>
+
+<img id="madz_logo" src="/images/madz_attendance_logo_inverted.png" class="madz_logo">  <!-- added by zaynin -->
+  
+<main>
+    <section id="home" class="tab-content">
+
+      <!-- <img src="/images/madz_attendance-2.jpg" width="315" height="121"> -->
+      <h2>Welcome to MADZ Attendance</h2>
+      <h3>This is a senior capstone project created by Mark, Anthony, Zaynin, and David.</h3>
+      <h3>Established in 2024.</h3>
+    </section>
+
+    <section id="faq" class="tab-content">
+      <h2>Here is where we will put the FAQs.</h2>
+      <p>Fill with information here.</p>
+      <h4> Who can use this? </h4>
+      <p> Students & their instructors will have access to this website. </p>
+      <h4> </h4>
+    </section>
+
+    <section id="about" class="tab-content">
+        <h2>Who Are We?</h2>
+        <p>Add here information about us...</p>
+      <p> MADZ is an acronym of all of our first names. Mark, Anthony, David and Zaynin. </p>
+      <h4> Mark - an Information Technology Major </h4>
+      <p> Mark, enter your information here. </p>
+      <h4> Anthony - A Computer Science Major </h4>
+      <p> Anthony's Info: </p>
+      <h4> David - A Computer Science Major </h4>
+      <p> David, enter information here.</p>
+      <h4> Zaynin - A computer Science Major</h4>
+      <p> Zaynin, enter information here. </p>
+    </section>
+</main>
+
+<footer>
+    <p><small>&copy; 2024 MADZ Attendance</small></p>
+    <p><small>This presentation is protected by U.S. and International copyright laws. Reproduction and distribution of this presentation without permission from MADZ Attendance is prohibited.</small></p>
+</footer>
+
+
+<script>
+// Function to show the home tab content on page load
+// Shows home tab on startup. (will have to do login instead) 
+function showHomeTab() {
+  // Hide all tab contents
+  var tabContents = document.querySelectorAll('.tab-content');
+  tabContents.forEach(function(tabContent) {
+    tabContent.style.display = 'none';
+  });
+
+  // Show the home tab content
+  document.getElementById('home').style.display = 'block';
+}
+
+// Call the function to show the home tab content on page load
+window.onload = showHomeTab;
+
+// Define the openTab function
+function openTab(tabName) {
+  var tabContents = document.querySelectorAll('.tab-content');
+  tabContents.forEach(function(tabContent) {
+    tabContent.style.display = 'none';
+  });
+
+  document.getElementById(tabName).style.display = 'block';
+}
+</script>
+
+
+
+
+	<!-- Core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+	
+	
+	<!-- This MUST be in <script> tag for some reason -->
+	<script type="module">
+	// Import the functions you need from the SDKs you need
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+	import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+	// TODO: Add SDKs for Firebase products that you want to use
+	// https://firebase.google.com/docs/web/setup#available-libraries
+
+	// Your web app's Firebase configuration
+	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	const firebaseConfig = 
+	{
+		apiKey: "AIzaSyDt0z6Li5YXqagcPgbOzXzSaUiEbLZ6_qc",
+		authDomain: "madz-attendance.firebaseapp.com",
+		projectId: "madz-attendance",
+		storageBucket: "madz-attendance.appspot.com",
+		messagingSenderId: "488541010538",
+		appId: "1:488541010538:web:cf16a08c8a4b026a4ca813",
+		measurementId: "G-04LKDVYT0L"
+	};
+
+	// Initialize Firebase
+	const app = initializeApp(firebaseConfig);
+	const analytics = getAnalytics(app);
+	
+	</script>
+	
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+
+<!-- Our own JavaScript for this project -->
+<script src="script.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
