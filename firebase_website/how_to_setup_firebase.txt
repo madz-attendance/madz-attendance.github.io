@@ -1,0 +1,38 @@
+1. make sure you have nodejs
+	test: node --version i think
+
+2. npm install -g firebase-tools
+3. "firebase login" in cmd (or logout to switch accounts)
+4. cd into/go to directory where you want to host website. "public" will go here.
+
+5. "firebase init hosting" to set up the project in your current directory
+6. some basic questions
+7. what do you want to use as your public directory? 
+	Type the name of the folder you want it to be hosted in.
+	Ex: "public"
+
+8. Configure as a single-page app (rewrite all page urls to
+	/index.html)?  NO!!!
+
+9. Github? NO, will figure this out later
+
+
+firebase.json file should contain:
+"
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/NAME OF DEFAULT PAGE.html"
+      }
+    ]
+  }
+}
+"
