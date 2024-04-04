@@ -107,9 +107,16 @@ form {
   cursor: pointer; /* Set to pointer cursor to tell user that this is clickable */
   
 }
+
 .faq-question {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
     font-size: 26px !important; /* Adjust the font size as needed */
+    cursor: pointer;
 }
+
 
 .faq-answer {
     display: none;
