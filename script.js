@@ -183,3 +183,18 @@ function resetButtonColors()
 	faq_button.style.filter = "brightness(100%)";
 	about_button.style.filter = "brightness(100%)";
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(function(question) {
+        question.addEventListener('click', function() {
+            var parent = this.parentElement;
+            parent.classList.toggle('active');
+        });
+    });
+});
+
+
+
