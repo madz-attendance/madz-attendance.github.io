@@ -109,11 +109,12 @@ form {
 }
 
 
-.faq-item .faq-answer {
+.faq-answer {
     display: none;
 }
 
 .faq-item.active .faq-answer {
     display: block;
 }
+
 
