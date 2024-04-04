@@ -107,3 +107,13 @@ form {
   cursor: pointer; /* Set to pointer cursor to tell user that this is clickable */
   
 }
+
+
+.faq-item .faq-answer {
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
