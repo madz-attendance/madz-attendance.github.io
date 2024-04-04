@@ -28,6 +28,9 @@ main > h2 {
   text-align: center;
   margin: 0; /* Remove default margins */
 }
+main h4 {
+  text-align: right;
+}
 
 .tab-button {
   background-color: #f0f0f0; /* Lighter grey color for tab buttons */
