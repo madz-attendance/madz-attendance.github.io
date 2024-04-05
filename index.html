@@ -49,22 +49,7 @@
     </div>
 </section>
 
-<button class="faq-question" onclick="this.parentElement.classList.toggle('active')">Who can use this?                <span class="arrow">&#x25BC;</span> </button>
-<div class="faq-answer">
-  </div>
 
-<script>
-// Select all buttons with the class faq-question
-const faqQuestions = document.querySelectorAll('.faq-question');
-
-// Loop through each button and add a click event listener
-faqQuestions.forEach(button => {
-  button.addEventListener('click', function() {
-    // Toggle the active class on the parent element (faq-item)
-    this.parentElement.classList.toggle('active');
-  });
-});
-</script>
   
 
     <section id="about" class="tab-content">
