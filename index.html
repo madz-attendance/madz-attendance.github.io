@@ -34,26 +34,30 @@
     .faq-answer {
         display: none;
     }
-  </style>
-    <div class="faq-item">
-        <button class="faq-question" onclick="toggleAnswer(0)">Who can use this? <span class="arrow">&#x25BC;</span></button>
-        <div class="faq-answer">
-            <p>Students, administration, and instructors will have access to this website.</p>
-        </div>
-    </div>
+  <style>
+    .faq-item {
+        position: relative;
+    }
 
-    <div class="faq-item">
-        <button class="faq-question" onclick="toggleAnswer(1)">I am a student, and I forgot my ID. How can I make sure my attendance is accounted for? <span class="arrow">&#x25BC;</span></button>
-        <div class="faq-answer">
-            <p>Students have multiple ways of marking their attendance:</p>
-            <ol>
-                <li>Students may tell their professor at the start of class, and the professor will manually mark their attendance.</li>
-                <li>Students may submit an Attendance Submission Request. This is a request for students who forgot to swipe, or don't have their ID, will be able to submit. The professor will have the chance to accept or decline this request.</li>
-            </ol>
-            <p>Note: The student will only be able to request attendance verification on the day of submission. This encourages attendance and accountability, as well as provides a solution to students via a mobile device or PC.</p>
-        </div>
+    .arrow {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+</style>
+
+<div class="faq-item">
+    <button class="faq-question" onclick="toggleAnswer(0)">I am a student, and I forgot my ID. How can I make sure my attendance is accounted for? <span class="arrow">&#x25BC;</span></button>
+    <div class="faq-answer">
+        <p>Students have multiple ways of marking their attendance:</p>
+        <ol>
+            <li>Students may tell their professor at the start of class, and the professor will manually mark their attendance.</li>
+            <li>Students may submit an Attendance Submission Request. This is a request for students who forgot to swipe, or don't have their ID, will be able to submit. The professor will have the chance to accept or decline this request.</li>
+        </ol>
+        <p>Note: The student will only be able to request attendance verification on the day of submission. This encourages attendance and accountability, as well as provides a solution to students via a mobile device or PC.</p>
     </div>
-</section>
+</div>
 
 <script>
     function toggleAnswer(index) {
@@ -69,7 +73,7 @@
         }
     }
 </script>
-  
+
 
     <section id="about" class="tab-content">
         <h2>Who Are We?</h2>
