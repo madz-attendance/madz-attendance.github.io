@@ -35,6 +35,7 @@
     }
     .faq-item {
         position: relative;
+        margin-bottom: 20px; /* Add spacing between Q&A pairs */
     }
 
     .faq-question {
@@ -44,7 +45,7 @@
     .arrow {
         position: absolute;
         top: 50%;
-        right: 5px;
+        right: 10px; /* Adjust the right alignment */
         transform: translateY(-50%);
     }
 
@@ -64,10 +65,12 @@
         <p>Note: The student will only be able to request attendance verification on the day of submission. This encourages attendance and accountability, as well as provides a solution to students via a mobile device or PC.</p>
     </div>
 </div>
+
+<!-- Add more Q&A templates here -->
 <div class="faq-item">
-    <button class="faq-question" onclick="toggleAnswer(this)"> Who can use this site? <span class="arrow">&#x25BC;</span></button>
+    <button class="faq-question" onclick="toggleAnswer(this)">Who can use this site? <span class="arrow">&#x25BC;</span></button>
     <div class="faq-answer">
-        <p> Students, faculty, and administrators will have access to this site. However, only faculty and administrators will have login permissions. </p>
+        <p>Students, faculty, and administrators will have access to this site. However, only faculty and administrators will have login permissions.</p>
     </div>
 </div>
 
