@@ -131,4 +131,7 @@ form {
     display: block;
 }
 
+.faq-item.active .arrow {
+    transform: rotate(180deg);
+}
 
