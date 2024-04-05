@@ -141,6 +141,6 @@ form {
 }
 
 .faq-item.active .arrow {
-    transform: rotate(180deg);
+    transform: translateY(-50%) rotate(180deg); /* Rotate the arrow when FAQ item is active */
 }
 
