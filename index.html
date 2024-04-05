@@ -29,12 +29,10 @@
     <section id="faq" class="tab-content">
     <h2>Here is where we will put the FAQs.</h2>
 
-
   <style>
     .faq-answer {
         display: none;
     }
-  <style>
     .faq-item {
         position: relative;
     }
@@ -42,10 +40,10 @@
     .arrow {
         position: absolute;
         top: 50%;
-        right: 0;
+        right: -20px; /* Adjust this value to fit your layout */
         transform: translateY(-50%);
     }
-</style>
+  </style>
 
 <div class="faq-item">
     <button class="faq-question" onclick="toggleAnswer(0)">I am a student, and I forgot my ID. How can I make sure my attendance is accounted for? <span class="arrow">&#x25BC;</span></button>
