@@ -26,18 +26,18 @@
       <h3>Established in 2024.</h3>
     </section>
 
-    <section id="faq" class="tab-content">
+<section id="faq" class="tab-content">
     <h2>Here is where we will put the FAQs.</h2>
 
     <div class="faq-item">
-        <button class="faq-question">Who can use this?                                <span class="arrow">&#x25BC;</span> </button>
+        <button class="faq-question" onclick="toggleAnswer(1)">Who can use this? <span class="arrow">&#x25BC;</span></button>
         <div class="faq-answer">
             <p>Students, administration, and instructors will have access to this website.</p>
         </div>
     </div>
 
     <div class="faq-item">
-        <button class="faq-question">I am a student, and I forgot my ID. How can I make sure my attendance is accounted for?                                                   <span class="arrow">&#x25BC;</span> </button>
+        <button class="faq-question" onclick="toggleAnswer(2)">I am a student, and I forgot my ID. How can I make sure my attendance is accounted for? <span class="arrow">&#x25BC;</span></button>
         <div class="faq-answer">
             <p>Students have multiple ways of marking their attendance:</p>
             <ol>
@@ -49,7 +49,20 @@
     </div>
 </section>
 
+<script>
+    function toggleAnswer(index) {
+        var answer = document.getElementsByClassName("faq-answer")[index - 1];
+        var arrow = document.getElementsByClassName("arrow")[index - 1];
 
+        if (answer.style.display === "none") {
+            answer.style.display = "block";
+            arrow.innerHTML = "&#x25B2;"; // Change arrow to point up
+        } else {
+            answer.style.display = "none";
+            arrow.innerHTML = "&#x25BC;"; // Change arrow to point down
+        }
+    }
+</script>
   
 
     <section id="about" class="tab-content">
