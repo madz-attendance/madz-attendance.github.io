@@ -47,6 +47,10 @@
         right: 5px;
         transform: translateY(-50%);
     }
+
+    .arrow.up {
+        transform: translateY(-50%) rotate(180deg);
+    }
   </style>
 
 <div class="faq-item">
@@ -68,10 +72,10 @@
 
         if (answer.style.display === "none" || answer.style.display === "") {
             answer.style.display = "block";
-            arrow.innerHTML = "&#x25B2;"; // Change arrow to point up
+            arrow.classList.add('up');
         } else {
             answer.style.display = "none";
-            arrow.innerHTML = "&#x25BC;"; // Change arrow to point down
+            arrow.classList.remove('up');
         }
     }
 </script>
