@@ -37,20 +37,20 @@
         position: relative;
     }
 
+    .faq-question {
+        position: relative;
+    }
+
     .arrow {
         position: absolute;
         top: 50%;
-        right: -20px; /* Adjust this value to fit your layout */
+        right: 5px;
         transform: translateY(-50%);
-    }
-
-    .arrow-flipped {
-        transform: translateY(-50%) rotate(180deg);
     }
   </style>
 
 <div class="faq-item">
-    <button class="faq-question" onclick="toggleAnswer(0)">I am a student, and I forgot my ID. How can I make sure my attendance is accounted for? <span class="arrow">&#x25BC;</span></button>
+    <button class="faq-question" onclick="toggleAnswer(this)">I am a student, and I forgot my ID. How can I make sure my attendance is accounted for? <span class="arrow">&#x25BC;</span></button>
     <div class="faq-answer">
         <p>Students have multiple ways of marking their attendance:</p>
         <ol>
@@ -62,16 +62,16 @@
 </div>
 
 <script>
-    function toggleAnswer(index) {
-        var answer = document.getElementsByClassName("faq-answer")[index];
-        var arrow = document.getElementsByClassName("arrow")[index];
+    function toggleAnswer(button) {
+        var answer = button.nextElementSibling;
+        var arrow = button.querySelector('.arrow');
 
-        if (window.getComputedStyle(answer).display === "none") {
+        if (answer.style.display === "none" || answer.style.display === "") {
             answer.style.display = "block";
-            arrow.classList.add("arrow-flipped"); // Add arrow flipped class
+            arrow.innerHTML = "&#x25B2;"; // Change arrow to point up
         } else {
             answer.style.display = "none";
-            arrow.classList.remove("arrow-flipped"); // Remove arrow flipped class
+            arrow.innerHTML = "&#x25BC;"; // Change arrow to point down
         }
     }
 </script>
@@ -131,4 +131,3 @@ function openTab(tabName) {
 
 </body>
 </html>
-
