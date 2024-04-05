@@ -118,6 +118,7 @@ form {
     cursor: pointer;
     font-weight: bold;
     text-align: left;
+    position: relative;
 }
 
 .faq-item {
@@ -125,6 +126,7 @@ form {
 }
 .faq-answer {
     display: none;
+    position: relative;
 }
 
 .faq-item.active .faq-answer {
@@ -132,7 +134,10 @@ form {
 }
 
 .arrow {
-  margin-left: auto; /* This will push the arrow to the right */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); /* This will push the arrow to the right */
 }
 
 .faq-item.active .arrow {
