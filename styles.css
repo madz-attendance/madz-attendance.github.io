@@ -131,6 +131,10 @@ form {
     display: block;
 }
 
+.arrow {
+  margin-left: auto; /* This will push the arrow to the right */
+}
+
 .faq-item.active .arrow {
     transform: rotate(180deg);
 }
