@@ -131,11 +131,6 @@ form {
     display: block;
 }
 
-.arrow {
-    position: absolute;
-}
-
 .faq-item.active .arrow {
-    transform: rotate(180deg); /* Rotate the arrow when FAQ item is active */
+    transform: rotate(180deg);
 }
-
