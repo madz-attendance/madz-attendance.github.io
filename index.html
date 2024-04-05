@@ -43,6 +43,10 @@
         right: -20px; /* Adjust this value to fit your layout */
         transform: translateY(-50%);
     }
+
+    .arrow-flipped {
+        transform: translateY(-50%) rotate(180deg);
+    }
   </style>
 
 <div class="faq-item">
@@ -64,10 +68,10 @@
 
         if (window.getComputedStyle(answer).display === "none") {
             answer.style.display = "block";
-            arrow.innerHTML = "&#x25B2;"; // Change arrow to point up
+            arrow.classList.add("arrow-flipped"); // Add arrow flipped class
         } else {
             answer.style.display = "none";
-            arrow.innerHTML = "&#x25BC;"; // Change arrow to point down
+            arrow.classList.remove("arrow-flipped"); // Remove arrow flipped class
         }
     }
 </script>
@@ -127,3 +131,4 @@ function openTab(tabName) {
 
 </body>
 </html>
+
