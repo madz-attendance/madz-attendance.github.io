@@ -168,7 +168,6 @@ form {
 }
 
 .question button span {
-  display: block; /* Ensure spans behave as block-level elements */
   text-align: left; /* Left align the text */
 }
 
