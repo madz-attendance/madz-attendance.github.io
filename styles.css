@@ -151,8 +151,8 @@ form {
   width: 100%;
   background-color: #f0f0f0;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-space;
+  justify-content: flex-start; /* Change to flex-start */
+  align-items: center;
   padding: 20px 15px;
   border: none;
   outline: none;
@@ -160,8 +160,9 @@ form {
   color: #000; /* Change text color to black */
   font-weight: 700;
   cursor: pointer;
-  text-align: left; /* Add left alignment */
+  text-align: left; /* Left align the text */
 }
+
 
 .question p {
   font-size: 18px;
