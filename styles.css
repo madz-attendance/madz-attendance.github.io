@@ -165,7 +165,8 @@ form {
 }
 
 
-
+.question button span {
+  text-align: left; 
 
 
 .question p {
