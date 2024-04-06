@@ -144,7 +144,7 @@ form {
 
 .question {
   border-bottom: 1px solid #fff;
-  background-color: #f0f0f0; /* Set background color */
+  /* Remove background-color property to make it transparent */
 }
 
 .question button {
@@ -186,3 +186,4 @@ form {
 .question button .d-arrow.rotate {
   transform: rotate(180deg);
 }
+
