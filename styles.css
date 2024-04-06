@@ -151,7 +151,7 @@ form {
   width: 100%;
   background-color: #f0f0f0;
   display: flex;
-  justify-content: flex-start; /* Change to flex-start */
+  justify-content: space-between;
   align-items: center;
   padding: 20px 15px;
   border: none;
@@ -162,6 +162,11 @@ form {
   cursor: pointer;
   text-align: left; /* Left align the text */
 }
+
+.question button .d-arrow {
+  margin-left: auto; /* Align the arrow logo to the right */
+}
+
 
 
 .question p {
