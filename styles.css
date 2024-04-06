@@ -160,6 +160,7 @@ form {
   color: #000; /* Change text color to black */
   font-weight: 700;
   cursor: pointer;
+  text-align: left;
 }
 
 
