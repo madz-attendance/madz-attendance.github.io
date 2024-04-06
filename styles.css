@@ -144,6 +144,7 @@ form {
 
 .question {
   border-bottom: 1px solid #fff;
+  text-align:left;
   /* Remove background-color property to make it transparent */
 }
 
