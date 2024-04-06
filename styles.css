@@ -152,7 +152,7 @@ form {
   background-color: #f0f0f0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-space;
   padding: 20px 15px;
   border: none;
   outline: none;
