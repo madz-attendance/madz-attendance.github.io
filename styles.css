@@ -163,12 +163,16 @@ form {
 }
 
 .question p {
-  font-size: 22px;
+  font-size: 18px;
   max-height: 0;
   opacity: 0;
   line-height: 1.5;
   overflow: hidden;
   transition: all 0.6s ease;
+}
+.question p span {
+  display: block; /* Make each list item display on a new line */
+  margin-bottom: 10px; /* Add some spacing between list items */
 }
 
 .d-arrow {
