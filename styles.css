@@ -174,11 +174,12 @@ form {
   overflow: hidden;
   transition: all 0.6s ease;
 }
+/*
 .question p span {
-  display: block; /* Make each list item display on a new line */
-  margin-bottom: 10px; /* Add some spacing between list items */
+  display: block; 
+  margin-bottom: 10px; /* Add some spacing between list items 
 }
-
+*/
 .d-arrow {
   transition: transform 0.5s ease-in;
   color: #000; /* Change arrow color to black */
