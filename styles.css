@@ -157,7 +157,7 @@ form {
   border: none;
   outline: none;
   font-size: 22px;
-  color: #fff;
+  color: #000; /* Change text color to black */
   font-weight: 700;
   cursor: pointer;
 }
@@ -173,7 +173,7 @@ form {
 
 .d-arrow {
   transition: transform 0.5s ease-in;
-  color: #fff;
+  color: #000; /* Change arrow color to black */
 }
 
 /* Add this class when click */
