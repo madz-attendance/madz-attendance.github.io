@@ -164,7 +164,7 @@ form {
 }
 
 .question button .d-arrow {
-  margin-left: auto; /* Align the arrow logo to the right */
+  margin-right: auto; /* Align the arrow logo to the right */
 }
 
 
