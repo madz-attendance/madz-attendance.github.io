@@ -24,7 +24,8 @@ main {
   max-width: 800px; /* Adjust the max-width as needed */
 }
 
-main > h2 {
+main > h2, 
+main > h3 {
   text-align: center;
   margin: 0; /* Remove default margins */
 }
