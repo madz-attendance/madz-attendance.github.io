@@ -152,22 +152,25 @@ form {
   width: 100%;
   background-color: #f0f0f0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Align text to the left */
   align-items: center;
   padding: 20px 15px;
   border: none;
   outline: none;
   font-size: 22px;
-  color: #000; /* Change text color to black */
+  color: #000;
   font-weight: 700;
   cursor: pointer;
-  text-align: left;
 }
 
+.question button .d-arrow {
+  margin-left: auto; /* Align the arrow logo to the right */
+}
 
 .question button span {
-  text-align: left; 
-
+  display: block; /* Ensure spans behave as block-level elements */
+  text-align: left; /* Left align the text */
+}
 
 .question p {
   font-size: 18px;
@@ -177,6 +180,7 @@ form {
   overflow: hidden;
   transition: all 0.6s ease;
 }
+
 /*
 .question p span {
   display: block; 
