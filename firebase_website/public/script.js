@@ -1,3 +1,41 @@
+/* Anthony April 6 2024 */
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.question button');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const faq = button.nextElementSibling;
+            const icon = button.querySelector('.d-arrow');
+
+            faq.classList.toggle('show');
+            icon.classList.toggle('rotate');
+        });
+    });
+});
+
+
+
+// Function to show the home tab content on page load
+// Shows home tab on startup. (will have to do login instead) 
+function showHomeTab() {
+  // Hide all tab contents
+  var tabContents = document.querySelectorAll('.tab-content');
+  tabContents.forEach(function(tabContent) {
+    tabContent.style.display = 'none';
+  });
+
+  // Show the home tab content
+  document.getElementById('home').style.display = 'block';
+}
+
+// Call the function to show the home tab content on page load
+window.onload = showHomeTab;
+
+
+/* End of Anthony April 6 2024 */
+
+
+
 function openTab(tabId) {
   // Hide all tab contents
   var tabContents = document.querySelectorAll('.tab-content');
