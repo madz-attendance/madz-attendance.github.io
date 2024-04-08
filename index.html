@@ -97,25 +97,17 @@
 
 
 
-  <style>
+ <style>
     form {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
         font-size: 18px;
     }
     label {
         margin-bottom: 10px;
     }
     input[type="text"] {
-        width: calc(100% - 10px);
+        width: calc(50% - 5px);
         padding: 5px;
         font-size: 16px;
-    }
-    input[type="submit"] {
-        grid-column: span 2;
-        padding: 10px 20px;
-        font-size: 18px;
     }
     .required::after {
         content: "*";
@@ -123,20 +115,25 @@
         margin-left: 5px;
     }
 </style>
+  
 <section id="request" class="tab-content">
-  <body>
     <h2>Enter An Attendance Verification Request</h2>
     <h3>This is for students only, here they will send in an attendance verification request.</h3>
     <h3>Students can only submit a request on the day they were absent. You cannot go back in time to submit requests.</h3>
     <h3>We have come to this conclusion to promote accountability for students, and make professors' lives easier.</h3>
 
 <form action="submit_verification.php" method="POST">
-    <label for="student_firstname">Student First Name<span class="required"></span>:</label>
-    <input type="text" id="student_firstname" name="student_Firstname" required>
-
-    <label for="student_lastname">Student Last Name<span class="required">*</span>:</label>
-    <input type="text" id="student_lastname" name="student_Lastname" required>
-
+    <div style="display: flex; justify-content: space-between;">
+        <div style="flex: 1;">
+            <label for="student_firstname">Student First Name<span class="required">*</span>:</label>
+            <input type="text" id="student_firstname" name="student_Firstname" required>
+        </div>
+        <div style="flex: 1; margin-left: 10px;">
+            <label for="student_lastname">Student Last Name<span class="required">*</span>:</label>
+            <input type="text" id="student_lastname" name="student_Lastname" required>
+        </div>
+    </div>
+    
     <label for="dept_code">Department Code<span class="required">*</span>:</label>
     <input type="text" id="dept_code" name="department_code" required>
 
@@ -151,7 +148,6 @@
 
     <input type="submit" value="Submit">
 </form>
-</body>
 </section>
 
 
