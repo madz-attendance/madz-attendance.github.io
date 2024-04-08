@@ -59,7 +59,7 @@ madzLogoButton.addEventListener("click", function() {
 var home_button = document.getElementById("home_button");
 var faq_button = document.getElementById("faq_button");
 var about_button = document.getElementById("about_button");
-
+var request_button = document.getElementById("request_button");
 var currentTab = "home";
 home_button.style.filter = "brightness(150%)";
 
