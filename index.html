@@ -144,10 +144,24 @@
     <input type="text" id="student_lastname" name="student_Lastname" required>
 
     <label for="dept_code">Department Code:<span class="required"></span></label>
-    <input type="text" id="dept_code" name="department_code" required>
+    <select id="dept_code" name="department_code" required>
+      <option value="">Select Department Code</option>
+      <option value="CPSC"> (CPSC) Computer Science</option>
+      <option value="ARTH">(ARTH) Art History</option>
+      <option value="POLI">(POLI) Political Science</option>
+      <option value="CHEM">(CHEM) Chemistry</option>
+      <option value="BIOL">(BIOL) Biology</option>
+            <!-- Add more options as needed -->
+        </select>
 
-    <label for="class_section">Class Section:<span class="required"></span></label>
-    <input type="text" id="class_section" name="class_section" required>
+        <label for="class_section">Class Section:<span class="required"></span></label>
+        <select id="class_section" name="class_section" required>
+            <option value="">Select Class Section</option>
+            <option value="Section1">Section1</option>
+            <option value="Section2">Section2</option>
+            <option value="Section3">Section3</option>
+            <!-- Add more options as needed -->
+        </select>
 
     <label for="professor_fName">Professor Email:<span class="required"></span></label>
     <input type="text" id="professor_email" name="professor_FirstName" required>
