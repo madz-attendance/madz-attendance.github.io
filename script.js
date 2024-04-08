@@ -126,7 +126,7 @@ about_button.addEventListener("mouseout", function() {
 
 request_button.addEventListener("click", function() {
   resetButtonColors();
-  if (currentTab != "about") {
+  if (currentTab != "request") {
     currentTab = "request";
     request_button.style.filter = "brightness(150%)";
   }
