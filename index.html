@@ -99,65 +99,55 @@
 
   <style>
     form {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: 18px; 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        font-size: 18px;
     }
     label {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
     input[type="text"] {
-        margin-bottom: 15px;
-        width: 300px; /* Adjust input box width */
-        padding: 5px; /* Add padding */
+        width: calc(100% - 10px);
+        padding: 5px;
         font-size: 16px;
     }
-     input[type="submit"] {
+    input[type="submit"] {
+        grid-column: span 2;
         padding: 10px 20px;
-        font-size: 18px; 
-     }
-       .required::after {
+        font-size: 18px;
+    }
+    .required::after {
         content: "*";
         color: red;
         margin-left: 5px;
     }
-    
 </style>
-
 <section id="request" class="tab-content">
   <body>
     <h2>Enter An Attendance Verification Request</h2>
     <h3>This is for students only, here they will send in an attendance verification request.</h3>
     <h3>Students can only submit a request on the day they were absent. You cannot go back in time to submit requests.</h3>
     <h3>We have come to this conclusion to promote accountability for students, and make professors' lives easier.</h3>
-     <form action="submit_verification.php" method="POST">
-    
-    Student First Name: <input type="text" 
-    name="student_Firstname" required><br>
 
-       
-    Student Last Name:
-    <input type="text" name="student_Lastname" required><br>
-       
+<form action="submit_verification.php" method="POST">
+    <label for="student_firstname">Student First Name<span class="required">*</span>:</label>
+    <input type="text" id="student_firstname" name="student_Firstname" required>
 
-    Department Code:
-    <input type="text" name="department_code" required><br>
-       
+    <label for="student_lastname">Student Last Name<span class="required">*</span>:</label>
+    <input type="text" id="student_lastname" name="student_Lastname" required>
 
-    Class Section:
-    <input type="text" name="class_section" required><br>
+    <label for="dept_code">Department Code<span class="required">*</span>:</label>
+    <input type="text" id="dept_code" name="department_code" required>
 
-        
-    Professor First Name:
-    <input type="text" name="professor_FirstName" required><br>
-        
+    <label for="class_section">Class Section<span class="required">*</span>:</label>
+    <input type="text" id="class_section" name="class_section" required>
 
-    Professor Last Name:
-    <input type="text"  name="professor_LastName" required><br>
+    <label for="professor_fName">Professor First Name<span class="required">*</span>:</label>
+    <input type="text" id="professor_fName" name="professor_FirstName" required>
 
-    Note To Professor: 
-    <input type="text" name=note_to_prof" required> <br>
+    <label for="professor_lName">Professor Last Name<span class="required">*</span>:</label>
+    <input type="text" id="professor_lName" name="professor_LastName" required>
 
     <input type="submit" value="Submit">
 </form>
