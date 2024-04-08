@@ -123,11 +123,33 @@ about_button.addEventListener("mouseout", function() {
   }
 });
 
+request_button.addEventListener("click", function() {
+  resetButtonColors();
+  if (currentTab != "about") {
+    currentTab = "request";
+    request_button.style.filter = "brightness(150%)";
+  }
+});
+
+request_button.addEventListener("mouseover", function() {
+  if (currentTab != "request") {
+    request_button.style.filter = "brightness(150%)";
+  }
+});
+
+request_button.addEventListener("mouseout", function() {
+  if (currentTab != "request") {
+    request_button.style.filter = "brightness(100%)";
+  }
+});
+
 function resetButtonColors() {
   home_button.style.filter = "brightness(100%)";
   faq_button.style.filter = "brightness(100%)";
   about_button.style.filter = "brightness(100%)";
+  request_button.style.filter = "brightness(100%)";
 }
+
 
 
 
