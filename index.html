@@ -217,25 +217,26 @@ const classSectionInput = document.getElementById("class_section");
 function updateClassSections() {
     const selectedDept = deptCodeInput.value.toUpperCase(); // Convert input to uppercase
     const selectedDeptOption = document.querySelector(`datalist[id="departments"] option[value="${selectedDept}"]`);
-    const classSectionsDatalist = selectedDeptOption.parentElement;
-
-    if (selectedDeptOption) {
-        const selectedDeptValue = selectedDeptOption.value;
+    if(selectedDeptOption) {
+        const classSectionDatalist = selectedDeptOption.parentElement;
+        const classSectionOptions = classSectionDatalist.querySelectorAll('option');
 
         // Clear existing options
-        classSectionDatalist.innerHTML = '';
+        classSectionInput.innerHTML = '';
 
         // Add options for the selected department
-        if (classSections[selectedDeptValue]) {
-            classSections[selectedDeptValue].forEach(section => {
-                const option = document.createElement('option');
-                option.text = section; // Set the option text
-                option.value = section; // Set the option value
-                classSectionDatalist.appendChild(option); // Add the option to the datalist
-            });
-        }
+        classSectionOptions.forEach(option => {
+            if (option.textContent.includes(selectedDept)) {
+                const clonedOption = option.cloneNode(true);
+                classSectionInput.appendChild(clonedOption);
+            }
+        });
+    } else {
+        // Handle case where selected department option is not found
+        console.error("Selected department option not found");
     }
 }
+
 
 
 // Event listener to update class sections when department code changes
