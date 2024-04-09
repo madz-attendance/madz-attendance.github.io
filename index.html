@@ -181,11 +181,32 @@ const deptCodeInput = document.getElementById("dept_code");
 const classSectionInput = document.getElementById("class_section");
 
 const classSections = {
-    "CPSC":["CPSC 135 010", "CPSC 135 020", "CPSC 136 010"],
-    "POLI":["POLI 10 010", "POLI 140 020", "POLI 181 010"],
-    "BUSN":["BUSN 131 030", "BUSN 275 810", "BUSN 130 010"]
-    // Add other departments and their class sections here
+    "CPSC": ["CPSC 135 010", "CPSC 135 020", "CPSC 136 010"],
+    "POLI": ["POLI 10 010", "POLI 140 020", "POLI 181 010"],
+    "BUSN": ["BUSN 131 030", "BUSN 275 810", "BUSN 130 010"]
 };
+
+const classSectionsDatalist = document.getElementById("class_sections");
+
+// Clear existing options
+classSectionsDatalist.innerHTML = '';
+
+// Loop through each department in classSections
+for (const department in classSections) {
+    if (classSections.hasOwnProperty(department)) {
+        // Loop through each class section in the department
+        classSections[department].forEach(section => {
+            // Create an option element
+            const option = document.createElement("option");
+            // Set the value of the option to the class section
+            option.value = section;
+            // Set the text content of the option to include both department and class section
+            option.textContent = `(${department}) ${section}`;
+            // Append the option to the datalist
+            classSectionsDatalist.appendChild(option);
+        });
+    }
+}
 
 // Function to update the class section options based on the selected department
 // Function to update the class section options based on the selected department
