@@ -241,6 +241,28 @@ document.addEventListener("DOMContentLoaded", function() {
         "BUSN": ["BUSN 131 030", "BUSN 275 810", "BUSN 130 010"]
         
     };
+    // Function to update the department code based on the selected class section
+function updateDeptCode() {
+    const selectedClassSection = classSectionInput.value.toUpperCase(); // Convert input to uppercase
+    
+    // Find the department code associated with the selected class section
+    let selectedDept = '';
+    for (const dept in classSections) {
+        if (classSections[dept].includes(selectedClassSection)) {
+            selectedDept = dept;
+            break;
+        }
+    }
+
+    // Autofill the department code input
+    deptCodeInput.value = selectedDept;
+
+    // Trigger the update of class sections based on the selected department code
+    updateClassSections();
+}
+
+// Event listener to update department code when class section changes
+classSectionInput.addEventListener("input", updateDeptCode);
 
     // Function to update the class section options based on the selected department
     function updateClassSections() {
