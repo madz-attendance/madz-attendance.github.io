@@ -173,12 +173,8 @@
             <option value="CPSC">CPSC 136 010</option>
             <!-- Add more options as needed -->
     <!--    </select> -->
-    <label for="class_section">Class Section:<span class="required"></span></label>
-    <input type="text" id="class_section" name="class_section" list="class_sections" required placeholder="Select Class Section">
-    <datalist id="class_sections">
-        <!-- Class sections will be dynamically populated based on the selected department code -->
-    </datalist>
-    <script>
+
+      <script>
 // Get references to the department code and class section elements
 const deptCodeInput = document.getElementById("dept_code");
 const classSectionInput = document.getElementById("class_section");
@@ -210,6 +206,14 @@ function updateClassSections() {
 // Event listener to update class sections when department code changes
 deptCodeInput.addEventListener("input", updateClassSections);
 </script>
+
+  
+    <label for="class_section">Class Section:<span class="required"></span></label>
+    <input type="text" id="class_section" name="class_section" list="class_sections" required placeholder="Select Class Section">
+    <datalist id="class_sections">
+        <!-- Class sections will be dynamically populated based on the selected department code -->
+    </datalist>
+
 
 
 
