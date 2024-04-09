@@ -219,7 +219,7 @@ input[type="text"] {
     right: 1px;
     transform: translateY(-50%);
     cursor: pointer;
-    display: none; /* Initially hide the clear icon */
+    display: none;
 }
 
 /* Optional: Style the "X" icon */
