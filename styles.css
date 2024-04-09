@@ -204,8 +204,13 @@ form {
   transform: rotate(180deg);
 }
 
+
 .input-wrapper {
     position: relative;
+}
+
+input[type="text"] {
+    padding-right: 25px; /* Adjust as needed to make space for the icon */
 }
 
 .clear-icon {
