@@ -148,7 +148,7 @@
         <label for="dept_code">Department Code:<span class="required"></span></label>
     <div class="input-wrapper">
     <input type="text" id="dept_code" name="department_code" list="departments"  required placeholder="Select a Department Code">
-    <span class="clear-icon" id="clear_dept_button">×</span>
+   <button id="clear_dept_button" class="clear-button">×</button>
     </div>  
     <datalist id="departments">
         <!-- Add department options here -->
@@ -180,31 +180,14 @@
 <label for="class_section">Class Section:<span class="required"></span></label>
 <div class="input-wrapper">
 <input type="text" id="class_section" name="class_section" list="class_sections" required placeholder="Select Class Section">
-<span class="clear-icon" id="clear_class_button">×</span>
+<button id="clear_class_button" class="clear-button">×</button>
 </div>
 <datalist id="class_sections">
     <!-- Class sections will be dynamically populated based on the selected department code -->
 </datalist>
   
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Get references to the department code and class section elements
-    const deptCodeInput = document.getElementById("dept_code");
-    const classSectionInput = document.getElementById("class_section");
-    const classSectionDatalist = document.getElementById("class_sections");
-    const clearDeptButton = document.getElementById("clear_dept_button");
-    const clearClassButton = document.getElementById("clear_class_button");
-
-    // Function to clear the selected department code
-    clearDeptButton.addEventListener("click", function() {
-        deptCodeInput.value = "";
-    });
-
-    // Function to clear the selected class section
-    clearClassButton.addEventListener("click", function() {
-        classSectionInput.value = "";
-    });
-    const classSections = {
+   const classSections = {
         "CPSC": ["CPSC 135 010", "CPSC 135 020", "CPSC 136 010"],
         "ARTH": ["ARTH 124 010", "ARTH 25 19H", "ARTH 309 010"],
         "POLI": ["POLI 10 010", "POLI 140 020", "POLI 181 010"],
@@ -216,14 +199,30 @@ document.addEventListener("DOMContentLoaded", function() {
         "ACCT": ["ACCT 121 020", "ACCT 122 010", "ACCT 305 010"],
         "ANIA": ["ANIA 141 030", "ANIA 171 020", "ANIA 231 610"],
         "ART": ["ART 141 011", "ART 161 610", "ART 31 010"],
-        "BUSN": ["BUSN 131 030", "BUSN 275 810", "BUSN 130 010"]
-        
+        "BUSN": ["BUSN 131 030", "BUSN 275 810", "BUSN 130 010"]    
     };
+document.addEventListener("DOMContentLoaded", function() {
+    // Get references to the department code and class section elements
+    const deptCodeInput = document.getElementById("dept_code");
+    const classSectionInput = document.getElementById("class_section");
+    const classSectionDatalist = document.getElementById("class_sections");
+    const clearDeptButton = document.getElementById("clear_dept_button");
+    const clearClassButton = document.getElementById("clear_class_button");
+
+    // Function to clear the selected department code
+    clearDeptButton.addEventListener("click", function() {
+        deptCodeInput.value = "";
+        updateClassSections(); // Clear class sections when department is cleared
+    });
+
+    // Function to clear the selected class section
+    clearClassButton.addEventListener("click", function() {
+        classSectionInput.value = "";
+    });
 
     // Function to update the class section options based on the selected department
     function updateClassSections() {
         const selectedDept = deptCodeInput.value.toUpperCase(); // Convert input to uppercase
-        console.log("Selected department:", selectedDept);
         
         // Clear existing options
         classSectionDatalist.innerHTML = '';
@@ -243,7 +242,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Trigger initial update of class sections
     updateClassSections();
+
+    // Show clear button when department code is selected
+    deptCodeInput.addEventListener("input", function() {
+        clearDeptButton.style.display = this.value ? "block" : "none";
+    });
+
+    // Show clear button when class section is selected
+    classSectionInput.addEventListener("input", function() {
+        clearClassButton.style.display = this.value ? "block" : "none";
+    });
 });
+
 
 </script>
 
