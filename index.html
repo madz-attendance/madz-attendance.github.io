@@ -217,7 +217,7 @@ const classSectionInput = document.getElementById("class_section");
 function updateClassSections() {
     const selectedDept = deptCodeInput.value.toUpperCase(); // Convert input to uppercase
     const selectedDeptOption = document.querySelector(`datalist[id="departments"] option[value="${selectedDept}"]`);
-    
+    const classSectionsDatalist = selectedDeptOption.parentElement;
 
     if (selectedDeptOption) {
         const selectedDeptValue = selectedDeptOption.value;
