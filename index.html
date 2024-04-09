@@ -215,31 +215,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const clearDeptButton = document.getElementById("clear_dept_button");
     const clearClassButton = document.getElementById("clear_class_button");
 
-    // Function to clear the selected department code and reset class sections
-    function clearDeptCode() {
+    // Function to clear the selected department code
+    clearDeptButton.addEventListener("click", function() {
         deptCodeInput.value = "";
-        classSectionInput.value = ""; // Clear the class section input when department code is cleared
-        clearClassSections(); // Clear and reset class sections datalist
-    }
-
-    // Event listener to clear the department code when the x button is clicked
-    clearDeptButton.addEventListener("click", clearDeptCode);
-
-    // Function to clear and reset class sections datalist
-    function clearClassSections() {
-        classSectionDatalist.innerHTML = ''; // Clear existing options
-        // Add default option for selecting class section
-        const defaultOption = document.createElement("option");
-        defaultOption.value = "";
-        defaultOption.textContent = "Select Class Section";
-        classSectionDatalist.appendChild(defaultOption);
-    }
-
-    // Event listener to clear the class section when the x button is clicked
-    clearClassButton.addEventListener("click", function() {
         classSectionInput.value = "";
     });
 
+    // Function to clear the selected class section
+    clearClassButton.addEventListener("click", function() {
+        classSectionInput.value = "";
+    });
     const classSections = {
         "CPSC": ["CPSC 135 010", "CPSC 135 020", "CPSC 136 010"],
         "ARTH": ["ARTH 124 010", "ARTH 25 19H", "ARTH 309 010"],
@@ -253,14 +238,16 @@ document.addEventListener("DOMContentLoaded", function() {
         "ANIA": ["ANIA 141 030", "ANIA 171 020", "ANIA 231 610"],
         "ART": ["ART 141 011", "ART 161 610", "ART 31 010"],
         "BUSN": ["BUSN 131 030", "BUSN 275 810", "BUSN 130 010"]
+        
     };
 
     // Function to update the class section options based on the selected department
     function updateClassSections() {
         const selectedDept = deptCodeInput.value.toUpperCase(); // Convert input to uppercase
+        console.log("Selected department:", selectedDept);
         
-        // Clear existing options and reset class sections
-        clearClassSections();
+        // Clear existing options
+        classSectionDatalist.innerHTML = '';
 
         // Add options for the selected department
         if (classSections[selectedDept]) {
@@ -278,7 +265,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Trigger initial update of class sections
     updateClassSections();
 });
-
 
 </script>
 
