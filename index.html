@@ -128,12 +128,7 @@
         padding: 5px;
         font-size: 16px;
     }
-     input[type="text"].dropdown-arrow {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px" height="24px"><path d="M7 10l5 5 5-5z" /></svg>'); /* Use an SVG arrow image */
-        background-repeat: no-repeat;
-        background-position: right 8px center; /* Adjust the position as needed */
-        padding-right: 5px; /* Add padding for the arrow */
-    }
+
 </style>
 <section id="request" class="tab-content">
   <body>
@@ -150,7 +145,7 @@
     <input type="text" id="student_lastname" name="student_Lastname" required>
 
         <label for="dept_code">Department Code:<span class="required"></span></label>
-    <input type="text" id="dept_code" name="department_code" list="departments" class="dropdown-arrow" required placeholder="Select a Department Code">
+    <input type="text" id="dept_code" name="department_code" list="departments"  required placeholder="Select a Department Code">
     <datalist id="departments">
         <!-- Add department options here -->
       <option value="CPSC"> (CPSC) Computer Science</option>
@@ -165,11 +160,12 @@
       <option value="ANIA">(ANIA) Animated Arts</option>
       <option value="ART">(ART) Art</option>
       <option value="BUSN">(BUSN) Business</option>
+      <option value="APDA">(APDA) Applied Digital Arts</option>
     </datalist>
 
             <!-- Add more options as needed -->
         </select>
-
+<!--
         <label for="class_section">Class Section:<span class="required"></span></label>
         <select id="class_section" name="class_section" required>
             <option value="">Select Class Section</option>
@@ -177,7 +173,47 @@
             <option value="CPSC">CPSC 135 020</option>
             <option value="CPSC">CPSC 136 010</option>
             <!-- Add more options as needed -->
-        </select>
+    <!--    </select> -->
+  
+    <label for="class_section">Class Section:<span class="required"></span></label>
+    <input type="text" id="class_section" name="class_section" list="class_sections" required placeholder="Select Class Section">
+    <datalist id="class_sections">
+        <!-- Class sections will be dynamically populated based on the selected department code -->
+    </datalist>
+</form>
+<script>
+    // Get references to the department code and class section elements
+    const deptCodeInput = document.getElementById("dept_code");
+    const classSectionInput = document.getElementById("class_section");
+
+    // Define the class sections for each department
+    const classSections = {
+        "CPSC": ["CPSC 135 010", "CPSC 135 020", "CPSC 136 010"],
+        "POLI": ["POLI 10 010", "POLI 140 020", "POLI 181 010"],
+        "BUSN": ["BUSN 131 030", "BUSN 275 810", "BUSN 130 010"]
+        // Add other departments and their class sections here
+    };
+
+    // Function to update the class section options based on the selected department
+    function updateClassSections() {
+        const selectedDept = deptCodeInput.value;
+        // Clear existing options
+        classSectionInput.innerHTML = '';
+        // Add options for the selected department
+        if (classSections[selectedDept]) {
+            classSections[selectedDept].forEach(section => {
+                const option = document.createElement('option');
+                option.value = section;
+                classSectionInput.appendChild(option);
+            });
+        }
+    }
+
+    // Event listener to update class sections when department code changes
+    deptCodeInput.addEventListener("input", updateClassSections);
+</script>
+
+  
 
     <label for="professor_fName">Professor Email:<span class="required"></span></label>
     <input type="text" id="professor_email" name="professor_FirstName" required>
