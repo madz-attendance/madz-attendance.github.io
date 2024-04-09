@@ -195,8 +195,8 @@
     };
 
     // Function to update the class section options based on the selected department
-    function updateClassSections() {
-        const selectedDept = deptCodeInput.value;
+     function updateClassSections() {
+        const selectedDept = deptCodeInput.value.toUpperCase(); // Convert input to uppercase
         // Clear existing options
         classSectionInput.innerHTML = '';
         // Add options for the selected department
