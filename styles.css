@@ -203,8 +203,3 @@ form {
 .question button .d-arrow.rotate {
   transform: rotate(180deg);
 }
-
-
-#class_sections {
-    display: block !important; /* Override any conflicting styles */
-}
