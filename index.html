@@ -175,11 +175,18 @@
     <!--    </select> -->
 
 
+<label for="class_section">Class Section:<span class="required"></span></label>
+<input type="text" id="class_section" name="class_section" list="class_sections" required placeholder="Select Class Section">
+<datalist id="class_sections">
+    <!-- Class sections will be dynamically populated based on the selected department code -->
+</datalist>
+  
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     // Get references to the department code and class section elements
     const deptCodeInput = document.getElementById("dept_code");
     const classSectionInput = document.getElementById("class_section");
+    const classSectionDatalist = document.getElementById("class_sections");
 
     const classSections = {
         "CPSC": ["CPSC 135 010", "CPSC 135 020", "CPSC 136 010"],
@@ -193,21 +200,15 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Selected department:", selectedDept);
         
         // Clear existing options
-        classSectionInput.innerHTML = '';
+        classSectionDatalist.innerHTML = '';
 
         // Add options for the selected department
         if (classSections[selectedDept]) {
             classSections[selectedDept].forEach(section => {
                 const option = document.createElement("option");
                 option.value = section;
-                option.textContent = section;
-                classSectionInput.appendChild(option);
+                classSectionDatalist.appendChild(option);
             });
-        } else {
-            // Handle case where selected department has no class sections
-            const option = document.createElement("option");
-            option.textContent = "No class sections available";
-            classSectionInput.appendChild(option);
         }
     }
 
@@ -217,16 +218,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Trigger initial update of class sections
     updateClassSections();
 });
+
 </script>
-
-
-
-  
-    <label for="class_section">Class Section:<span class="required"></span></label>
-    <input type="text" id="class_section" name="class_section" list="class_sections" required placeholder="Select Class Section">
-    <datalist id="class_sections">
-        <!-- Class sections will be dynamically populated based on the selected department code -->
-    </datalist>
 
     <label for="professor_fName">Professor Email:<span class="required"></span></label>
     <input type="text" id="professor_email" name="professor_FirstName" required>
