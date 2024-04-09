@@ -129,6 +129,21 @@
         font-size: 16px;
     }
 
+   .input-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .clear-button {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
 </style>
 <section id="request" class="tab-content">
   <body>
@@ -148,7 +163,7 @@
         <label for="dept_code">Department Code:<span class="required"></span></label>
     <div class="input-wrapper">
     <input type="text" id="dept_code" name="department_code" list="departments"  required placeholder="Select a Department Code">
-    <span class="clear-icon" id="clear_dept_button"><i class="far fa-times-circle"></i></span>
+    <button id="clear_dept_button" class="clear-button"><i class="far fa-times-circle"></i></button>
     </div>  
     <datalist id="departments">
         <!-- Add department options here -->
@@ -180,7 +195,7 @@
 <label for="class_section">Class Section:<span class="required"></span></label>
 <div class="input-wrapper">
 <input type="text" id="class_section" name="class_section" list="class_sections" required placeholder="Select Class Section">
-<span class="clear-icon" id="clear_class_button"><i class="far fa-times-circle"></i></span>
+<button id="clear_class_button" class="clear-button"><i class="far fa-times-circle"></i></button>
 </div>
 <datalist id="class_sections">
     <!-- Class sections will be dynamically populated based on the selected department code -->
