@@ -181,36 +181,37 @@
     </datalist>
     <script>
     // Get references to the department code and class section elements
-    const deptCodeInput = document.getElementById("dept_code");
-    const classSectionInput = document.getElementById("class_section");
+    // Get references to the department code and class section elements
+const deptCodeInput = document.getElementById("dept_code");
+const classSectionInput = document.getElementById("class_section");
 
-    // Define the class sections for each department
-    const classSections = {
-        "CPSC": ["CPSC 135 010", "CPSC 135 020", "CPSC 136 010"],
-         "POLI": ["POLI 10 010", "POLI 140 020", "POLI 181 010"],
-        "BUSN": ["BUSN 131 030", "BUSN 275 810", "BUSN 130 010"]
-        // Add other departments and their class sections here
-    };
+// Define the class sections for each department
+const classSections = {
+    "CPSC": ["CPSC 135 010", "CPSC 135 020", "CPSC 136 010"],
+    "POLI": ["POLI 10 010", "POLI 140 020", "POLI 181 010"],
+    "BUSN": ["BUSN 131 030", "BUSN 275 810", "BUSN 130 010"]
+    // Add other departments and their class sections here
+};
 
-    // Function to update the class section options based on the selected department
-    function updateClassSections() {
-        const selectedDept = deptCodeInput.value.toUpperCase(); // Convert input to uppercase
-        // Clear existing options
-        classSectionInput.innerHTML = '';
-        // Add options for the selected department
-        if (classSections[selectedDept]) {
-            classSections[selectedDept].forEach(section => {
-                const option = document.createElement('option');
-                option.text = section; // Set the option text
-                option.value = section; // Set the option value
-                classSectionInput.add(option); // Add the option to the select element
-            });
-        }
+// Function to update the class section options based on the selected department
+function updateClassSections() {
+    const selectedDept = deptCodeInput.value.toUpperCase(); // Convert input to uppercase
+    // Clear existing options
+    classSectionInput.innerHTML = '';
+    // Add options for the selected department
+    if (classSections[selectedDept]) {
+        classSections[selectedDept].forEach(section => {
+            const option = document.createElement('option');
+            option.text = section; // Set the option text
+            option.value = section; // Set the option value
+            classSectionInput.appendChild(option); // Add the option to the select element
+        });
     }
+}
 
-    // Event listener to update class sections when department code changes
-    deptCodeInput.addEventListener("change", updateClassSections);
-</script>
+// Event listener to update class sections when department code changes
+deptCodeInput.addEventListener("input", updateClassSections);
+
 
 
   
