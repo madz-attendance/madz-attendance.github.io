@@ -180,12 +180,17 @@
 const deptCodeInput = document.getElementById("dept_code");
 const classSectionInput = document.getElementById("class_section");
 
-document.addEventListener("DOMContentLoaded", function() {
-    const classSections = {
-        "CPSC": ["CPSC 135 010", "CPSC 135 020", "CPSC 136 010"],
-        "POLI": ["POLI 10 010", "POLI 140 020", "POLI 181 010"],
-        "BUSN": ["BUSN 131 030", "BUSN 275 810", "BUSN 130 010"]
-    };
+const classSections = {
+            "CPSC": ["CPSC 135 010", "CPSC 135 020", "CPSC 136 010"],
+            "POLI": ["POLI 10 010", "POLI 140 020", "POLI 181 010"],
+            "BUSN": ["BUSN 131 030", "BUSN 275 810", "BUSN 130 010"]
+            // Add other departments and their class sections here
+        };
+
+        // Event listener for DOMContentLoaded event
+        document.addEventListener("DOMContentLoaded", function() {
+            const classSectionsDatalist = document.getElementById("class_sections");
+
 
     const classSectionsDatalist = document.getElementById("class_sections");
 
