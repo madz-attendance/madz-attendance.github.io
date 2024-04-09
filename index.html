@@ -202,13 +202,17 @@ function updateClassSections() {
     // Add options for the selected department
     if (classSections[selectedDept]) {
         classSections[selectedDept].forEach(section => {
-            const option = document.createElement('option');
-            option.text = section; // Set the option text
-            option.value = section; // Set the option value
-            classSectionInput.appendChild(option); // Add the option to the select element
+            // Check if the section contains the selected department value
+            if (section.includes(selectedDept)) {
+                const option = document.createElement('option');
+                option.text = section; // Set the option text
+                option.value = section; // Set the option value
+                classSectionInput.appendChild(option); // Add the option to the select element
+            }
         });
     }
 }
+
 
 // Event listener to update class sections when department code changes
 deptCodeInput.addEventListener("input", updateClassSections);
