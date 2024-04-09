@@ -192,6 +192,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to update the class section options based on the selected department
     function updateClassSections() {
         const selectedDept = deptCodeInput.value.toUpperCase(); // Convert input to uppercase
+        console.log("Selected department:", selectedDept);
+        
         const selectedDeptOption = document.querySelector(`datalist[id="departments"] option[value="${selectedDept}"]`);
         if(selectedDeptOption) {
             const classSectionDatalist = selectedDeptOption.parentElement;
