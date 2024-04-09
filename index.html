@@ -144,8 +144,12 @@
     <label for="student_lastname">Student Last Name:<span class="required"></span></label>
     <input type="text" id="student_lastname" name="student_Lastname" required>
 
+  
         <label for="dept_code">Department Code:<span class="required"></span></label>
+    <div class="input-wrapper">
     <input type="text" id="dept_code" name="department_code" list="departments"  required placeholder="Select a Department Code">
+    <button class="clear-button" id="clear_dept_button">X</button>
+    </div>  
     <datalist id="departments">
         <!-- Add department options here -->
       <option value="CPSC"> (CPSC) Computer Science</option>
@@ -175,7 +179,10 @@
 
 
 <label for="class_section">Class Section:<span class="required"></span></label>
+<div class="input-wrapper">
 <input type="text" id="class_section" name="class_section" list="class_sections" required placeholder="Select Class Section">
+<button class="clear-button" id="clear_class_button">X</button>
+</div>
 <datalist id="class_sections">
     <!-- Class sections will be dynamically populated based on the selected department code -->
 </datalist>
@@ -186,7 +193,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const deptCodeInput = document.getElementById("dept_code");
     const classSectionInput = document.getElementById("class_section");
     const classSectionDatalist = document.getElementById("class_sections");
+    const clearDeptButton = document.getElementById("clear_dept_button");
+    const clearClassButton = document.getElementById("clear_class_button");
 
+    // Function to clear the selected department code
+    clearDeptButton.addEventListener("click", function() {
+        deptCodeInput.value = "";
+    });
+
+    // Function to clear the selected class section
+    clearClassButton.addEventListener("click", function() {
+        classSectionInput.value = "";
+    });
     const classSections = {
         "CPSC": ["CPSC 135 010", "CPSC 135 020", "CPSC 136 010"],
         "ARTH": ["ARTH 124 010", "ARTH 25 19H", "ARTH 309 010"],
