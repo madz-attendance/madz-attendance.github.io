@@ -203,3 +203,21 @@ form {
 .question button .d-arrow.rotate {
   transform: rotate(180deg);
 }
+
+.input-wrapper {
+    position: relative;
+}
+
+.clear-icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Optional: Style the "X" icon */
+.clear-icon:hover {
+    color: red;
+}
+
