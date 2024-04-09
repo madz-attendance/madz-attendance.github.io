@@ -211,24 +211,29 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Function to update the class section options based on the selected department
-// Function to update the class section options based on the selected department
 function updateClassSections() {
     const selectedDept = deptCodeInput.value.toUpperCase(); // Convert input to uppercase
     const selectedDeptOption = document.querySelector(`datalist[id="departments"] option[value="${selectedDept}"]`);
-    const classSectionDatalist = selectedDeptOption.parentElement;
-    const classSectionOptions = classSectionDatalist.querySelectorAll('option');
+    const classSectionDatalist = document.getElementById("class_sections");
 
-    // Clear existing options
-    classSectionInput.innerHTML = '';
+    if (selectedDeptOption) {
+        const selectedDeptValue = selectedDeptOption.value;
 
-    // Add options for the selected department
-    classSectionOptions.forEach(option => {
-        if (option.textContent.includes(selectedDept)) {
-            const clonedOption = option.cloneNode(true);
-            classSectionInput.appendChild(clonedOption);
+        // Clear existing options
+        classSectionDatalist.innerHTML = '';
+
+        // Add options for the selected department
+        if (classSections[selectedDeptValue]) {
+            classSections[selectedDeptValue].forEach(section => {
+                const option = document.createElement('option');
+                option.text = section; // Set the option text
+                option.value = section; // Set the option value
+                classSectionDatalist.appendChild(option); // Add the option to the datalist
+            });
         }
-    });
+    }
 }
+
 
 // Event listener to update class sections when department code changes
 deptCodeInput.addEventListener("input", updateClassSections);
