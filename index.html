@@ -249,6 +249,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // Clear existing options
         classSectionDatalist.innerHTML = '';
 
+        if (deptCodeInput.value === '') {
+        return;
+        }
         // Add options for the selected department
         if (classSections[selectedDept]) {
             classSections[selectedDept].forEach(section => {
