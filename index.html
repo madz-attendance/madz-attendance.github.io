@@ -98,6 +98,10 @@
 
 
   <style>
+    .form-container {
+    height: 1000px; /* Adjust the height as needed */
+    overflow: auto;
+}
     form {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -157,6 +161,7 @@
     <p>Students can only submit a request on the day they were absent. </p>
     <p><small><small>Note: <span style="color: red;">Red asterisks (*) indicate required fields.</span></small></small></p>
 
+<div class="form-container">
 <form action="submit_verification.php" method="POST">
     <label for="student_firstname">Student First Name:<span class="required"></span></label>
     <input type="text" id="student_firstname" name="student_Firstname" required>
@@ -282,6 +287,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     <input type="submit" value="Submit">
 </form>
+</div>
 </body>
 </section>
 
