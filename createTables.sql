@@ -2,11 +2,11 @@
 -- this is Fac Registration 
 CREATE TABLE FacInfo (
     FacID INT PRIMARY KEY,
-    Dept VARCHAR(25),
-    Email VARCHAR(100) UNIQUE,
-    FirstName VARCHAR(30),
-    LastName VARCHAR(30),
-    ClassesTaught VARCHAR(100),
+    Dept VARCHAR2(4),
+    Email VARCHAR2(15) UNIQUE,
+    FirstName VARCHAR2(20),
+    LastName VARCHAR2(20),
+    ClassesTaught VARCHAR2(100),
     IsChair CHAR(1) DEFAULT 'N',
     
     CHECK (IsChair IN ('Y', 'N'))
@@ -15,8 +15,8 @@ CREATE TABLE FacInfo (
 
 -- For Faculty login
 CREATE TABLE FacultyLogin (
-    Email VARCHAR(20) PRIMARY KEY,
-    Password VARCHAR(30) NOT NULL,
+    Email VARCHAR2(15) PRIMARY KEY,
+    Password VARCHAR2(16) NOT NULL,
     FacID INT NOT NULL,
     
     FOREIGN KEY (FacID, Email) REFERENCES FacInfo(FacID, Email)
@@ -24,11 +24,11 @@ CREATE TABLE FacultyLogin (
 
 --For attendance Verification
 CREATE TABLE AttendanceVerification (
-    StudentFirstName VARCHAR(50) NOT NULL,
-    StudentLastName VARCHAR(50) NOT NULL,
-    DeptCode VARCHAR(10) NOT NULL,
-    CourseCode VARCHAR(10) NOT NULL,
-    FacEmail VARCHAR(100) NOT NULL,
+    StudentFirstName VARCHAR2(20) NOT NULL,
+    StudentLastName VARCHAR2(20) NOT NULL,
+    DeptCode VARCHAR2(4) NOT NULL,
+    CourseCode VARCHAR2(10) NOT NULL,
+    FacEmail VARCHAR2(15) NOT NULL,
     Note TEXT,
     InsertDate DATE NOT NULL,
     InsertTime TIME NOT NULL,
@@ -40,12 +40,12 @@ CREATE TABLE AttendanceVerification (
 CREATE TABLE ClassAttendance (
     AttendanceID INT PRIMARY KEY AUTO_INCREMENT,
     AttendanceDate DATE NOT NULL,
-    CourseCode VARCHAR(10) NOT NULL,
-    FacEmail VARCHAR(100) NOT NULL,
-    StudentFirstName VARCHAR(50) NOT NULL,
-    StudentLastName VARCHAR(50) NOT NULL,
-    DeptCode VARCHAR(10) NOT NULL,
-    AttendanceStatus VARCHAR(10) NOT NULL,
+    CourseCode VARCHAR2(10) NOT NULL,
+    FacEmail VARCHAR2(15) NOT NULL,
+    StudentFirstName VARCHAR2(20) NOT NULL,
+    StudentLastName VARCHAR2(20) NOT NULL,
+    DeptCode VARCHAR2(4) NOT NULL,
+    AttendanceStatus VARCHAR2(10) NOT NULL,
     Note TEXT,
     InsertDate DATE NOT NULL,
     InsertTime TIME NOT NULL,
