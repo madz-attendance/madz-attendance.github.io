@@ -59,16 +59,52 @@
   <footer>
     <p><small>&copy; 2024 MADZ Attendance</small></p>
   </footer>
+
   <script src="script.js"></script>
+
   <script>
-    window.onload = function() {
-      showHomeTab();
-      // Add event listener to detect page refresh
-      window.addEventListener('beforeunload', function() {
-          // Redirect to the homepage
-          window.location.href = '/index.html'; // Adjust the URL if needed
+    // Function to show the home tab content on page load
+    function showHomeTab() {
+      // Hide all tab contents
+      var tabContents = document.querySelectorAll('.tab-content');
+      tabContents.forEach(function(tabContent) {
+        tabContent.style.display = 'none';
       });
-    };
+
+      // Show the home tab content
+      document.getElementById('home').style.display = 'block';
+    }
+
+    // Call the function to show the home tab content on page load
+    window.onload = showHomeTab;
+
+    // Define the openTab function
+    function openTab(tabName) {
+      var tabContents = document.querySelectorAll('.tab-content');
+      tabContents.forEach(function(tabContent) {
+        tabContent.style.display = 'none';
+      });
+
+      document.getElementById(tabName).style.display = 'block';
+
+      // Update URL based on tabName
+      switch (tabName) {
+        case 'home':
+          window.history.pushState({}, '', '/');
+          break;
+        case 'faq':
+          window.history.pushState({}, '', '/faq.html');
+          break;
+        case 'about':
+          window.history.pushState({}, '', '/about');
+          break;
+        case 'request':
+          window.history.pushState({}, '', '/request');
+          break;
+        default:
+          break;
+      }
+    }
   </script>
 </body>
 </html>
