@@ -307,11 +307,13 @@ function showHomeTab() {
   // Hide all tab contents
   var tabContents = document.querySelectorAll('.tab-content');
   tabContents.forEach(function(tabContent) {
-    tabContent.style.display = 'block';
+    tabContent.style.display = 'none';
   });
 
   // Always default to the home tab
   document.getElementById('home').style.display = 'block';
+
+  window.history.pushState({}, '', '?tab=home');
 }
 
 // Call the function to show the home tab content on page load
