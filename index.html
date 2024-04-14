@@ -302,30 +302,15 @@ document.addEventListener("DOMContentLoaded", function() {
 <script src="script.js"></script>
 
 <script>
-// Function to show the home tab content on page load
-// Shows home tab on startup. (will have to do login instead) 
-function showHomeTab() {
+// Function to show the specified tab content and update the URL
+function openTab(tabName) {
   // Hide all tab contents
   var tabContents = document.querySelectorAll('.tab-content');
   tabContents.forEach(function(tabContent) {
     tabContent.style.display = 'none';
   });
 
-  // Show the home tab content
-  document.getElementById('home').style.display = 'block';
-}
-
-// Call the function to show the home tab content on page load
-window.onload = showHomeTab;
-
-// Define the openTab function
-// Define the openTab function
-function openTab(tabName) {
-  var tabContents = document.querySelectorAll('.tab-content');
-  tabContents.forEach(function(tabContent) {
-    tabContent.style.display = 'none';
-  });
-
+  // Show the specified tab content
   document.getElementById(tabName).style.display = 'block';
 
   // Update URL based on tabName
@@ -337,17 +322,40 @@ function openTab(tabName) {
       window.history.pushState({}, '', '/faq.html');
       break;
     case 'about':
-      window.history.pushState({}, '', '/about');
+      window.history.pushState({}, '', '/about.html');
       break;
     case 'request':
-      window.history.pushState({}, '', '/request');
+      window.history.pushState({}, '', '/request.html');
       break;
     default:
       break;
   }
 }
 
+// Function to handle page refresh
+window.onload = function() {
+  var currentURL = window.location.pathname;
+
+  switch (currentURL) {
+    case '/':
+      openTab('home');
+      break;
+    case '/faq.html':
+      openTab('faq');
+      break;
+    case '/about.html':
+      openTab('about');
+      break;
+    case '/request.html':
+      openTab('request');
+      break;
+    default:
+      openTab('home');
+      break;
+  }
+};
 </script>
+
 
 </body>
 </html>
