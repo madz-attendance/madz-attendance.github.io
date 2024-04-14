@@ -62,21 +62,62 @@
 
   <script src="script.js"></script>
 
+
+
 <script>
-// Function to show the home tab content on page load
-function showHomeTab() {
+// Function to show the specified tab content and update the URL
+function openTab(tabName) {
   // Hide all tab contents
   var tabContents = document.querySelectorAll('.tab-content');
   tabContents.forEach(function(tabContent) {
     tabContent.style.display = 'none';
   });
 
-  // Show the home tab content
-  document.getElementById('home').style.display = 'block';
+  // Show the specified tab content
+  document.getElementById(tabName).style.display = 'block';
+
+  // Update URL based on tabName
+  switch (tabName) {
+    case 'home':
+      window.history.pushState({}, '', '/');
+      break;
+    case 'faq':
+      window.history.pushState({}, '', '/faq.html');
+      break;
+    case 'about':
+      window.history.pushState({}, '', '/about.html');
+      break;
+    case 'request':
+      window.history.pushState({}, '', '/request.html');
+      break;
+    default:
+      break;
+  }
 }
 
-// Call the function to show the home tab content on page load
-window.onload = showHomeTab;
+// Function to handle page refresh
+window.onload = function() {
+  var currentURL = window.location.pathname;
+
+  switch (currentURL) {
+    case '/':
+      openTab('home');
+      break;
+    case '/faq.html':
+      openTab('faq');
+      break;
+    case '/about.html':
+      openTab('about');
+      break;
+    case '/request.html':
+      openTab('request');
+      break;
+    default:
+      openTab('home');
+      break;
+  }
+};
+
 </script>
 
 </body>
