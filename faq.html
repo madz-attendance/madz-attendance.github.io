@@ -59,7 +59,16 @@
   <footer>
     <p><small>&copy; 2024 MADZ Attendance</small></p>
   </footer>
-
+<script>
+  window.onload = function() {
+    showHomeTab();
+    // Add event listener to detect page refresh
+    window.addEventListener('beforeunload', function() {
+        // Redirect to the homepage
+        window.location.href = '/'; // Adjust the URL if needed
+    });
+};
+</script>
   <script src="script.js"></script>
 </body>
 </html>
