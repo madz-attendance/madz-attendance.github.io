@@ -331,16 +331,16 @@ function openTab(tabName) {
   // Update URL based on tabName
   switch (tabName) {
     case 'home':
-      window.history.pushState({}, '', '/');
+      window.history.pushState({}, '', '/index.html');
       break;
     case 'faq':
-      window.history.pushState({}, '', '/faq');
+      window.history.pushState({}, '', '/faq.html');
       break;
     case 'about':
-      window.history.pushState({}, '', '/about');
+      window.history.pushState({}, '', '/about.html');
       break;
     case 'request':
-      window.history.pushState({}, '', '/request');
+      window.history.pushState({}, '', '/request.html');
       break;
     default:
       break;
