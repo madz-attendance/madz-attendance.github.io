@@ -319,6 +319,7 @@ function showHomeTab() {
 window.onload = showHomeTab;
 
 // Define the openTab function
+// Define the openTab function
 function openTab(tabName) {
   var tabContents = document.querySelectorAll('.tab-content');
   tabContents.forEach(function(tabContent) {
@@ -326,7 +327,26 @@ function openTab(tabName) {
   });
 
   document.getElementById(tabName).style.display = 'block';
+
+  // Update URL based on tabName
+  switch (tabName) {
+    case 'home':
+      window.history.pushState({}, '', '/');
+      break;
+    case 'faq':
+      window.history.pushState({}, '', '/faq');
+      break;
+    case 'about':
+      window.history.pushState({}, '', '/about');
+      break;
+    case 'request':
+      window.history.pushState({}, '', '/request');
+      break;
+    default:
+      break;
+  }
 }
+
 </script>
 
 </body>
