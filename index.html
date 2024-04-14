@@ -310,17 +310,8 @@ function showHomeTab() {
     tabContent.style.display = 'none';
   });
 
-  // Get the tab name from the URL
-  var urlParams = new URLSearchParams(window.location.search);
-  var tabName = urlParams.get('tab');
-
-  // If no tab name is specified in the URL, default to 'home'
-  if (!tabName) {
-    tabName = 'home';
-  }
-
-  // Show the tab content corresponding to the tabName
-  document.getElementById(tabName).style.display = 'block';
+  // Always default to the home tab
+  document.getElementById('home').style.display = 'block';
 }
 
 // Call the function to show the home tab content on page load
@@ -339,6 +330,7 @@ function openTab(tabName) {
   window.history.pushState({}, '', '?tab=' + tabName);
 }
 </script>
+
 
 
 </body>
