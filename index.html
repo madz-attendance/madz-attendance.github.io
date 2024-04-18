@@ -226,7 +226,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const db = firebase.firestore();
+//const db = firebase.firestore();
+const db = getFirestore(app);
 
 // Add a new document with a generated ID
 db.collection("attendance_requests").add({
