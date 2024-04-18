@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>MADZ Attendance Site</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -202,7 +204,49 @@
             <option value="CPSC">CPSC 136 010</option>
             <!-- Add more options as needed -->
     <!--    </select> -->
+<script>
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDt0z6Li5YXqagcPgbOzXzSaUiEbLZ6_qc",
+  authDomain: "madz-attendance.firebaseapp.com",
+  databaseURL: "https://madz-attendance-default-rtdb.firebaseio.com",
+  projectId: "madz-attendance",
+  storageBucket: "madz-attendance.appspot.com",
+  messagingSenderId: "488541010538",
+  appId: "1:488541010538:web:cf16a08c8a4b026a4ca813",
+  measurementId: "G-04LKDVYT0L"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const db = firebase.firestore();
+
+// Add a new document with a generated ID
+db.collection("attendance_requests").add({
+    student_firstname: "John",
+    student_lastname: "Doe",
+    department_code: "CPSC",
+    class_section: "CPSC 135 010",
+    professor_email: "professor@example.com",
+    professor_note: "Note to professor..."
+})
+.then((docRef) => {
+    console.log("Document written with ID: ", docRef.id);
+})
+.catch((error) => {
+    console.error("Error adding document: ", error);
+});
+
+</script>
+
+  
 <label for="class_section">Class Section:<span class="required"></span></label>
 <div class="input-wrapper">
 <input type="text" id="class_section" name="class_section" list="class_sections" required placeholder="Select Class Section">
