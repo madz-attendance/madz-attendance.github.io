@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <title>MADZ Attendance Site</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-  <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore.js"></script>
   <link rel="stylesheet" href="styles.css">
-  <script src="firebase.js" type="module"></script>
 </head>
 <body>
   
@@ -166,7 +163,7 @@
     <p><small><small>Note: <span style="color: red;">Red asterisks (*) indicate required fields.</span></small></small></p>
 
 <div class="form-container">
-<form onsubmit="submitForm(event)"> 
+<form action="submit_verification.php" method="POST">
     <label for="student_firstname">Student First Name:<span class="required"></span></label>
     <input type="text" id="student_firstname" name="student_Firstname" required>
 
@@ -195,6 +192,16 @@
       <option value="BUSN">(BUSN) Business</option>
     </datalist>
     
+            <!-- Add more options as needed -->
+<!--
+        <label for="class_section">Class Section:<span class="required"></span></label>
+        <select id="class_section" name="class_section" required>
+            <option value="">Select Class Section</option>
+            <option value="CPSC">CPSC 135 010</option>
+            <option value="CPSC">CPSC 135 020</option>
+            <option value="CPSC">CPSC 136 010</option>
+            <!-- Add more options as needed -->
+    <!--    </select> -->
 
 <label for="class_section">Class Section:<span class="required"></span></label>
 <div class="input-wrapper">
