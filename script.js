@@ -152,24 +152,5 @@ function resetButtonColors() {
 }
 
 
-import { addAttendanceRequest } from "./firebase.js";
-
-function submitForm(event) {
-  event.preventDefault();
-  
-  const studentFirstname = document.getElementById("student_firstname").value;
-  const studentLastname = document.getElementById("student_lastname").value;
-  const departmentCode = document.getElementById("dept_code").value;
-  const classSection = document.getElementById("class_section").value;
-  const professorEmail = document.getElementById("professor_email").value;
-  const professorNote = document.getElementById("professor_note").value;
-
-  addAttendanceRequest(studentFirstname, studentLastname, departmentCode, classSection, professorEmail, professorNote);
-}
-
-// Add event listener to the form
-document.querySelector("form").addEventListener("submit", submitForm);
-
-
 
 
